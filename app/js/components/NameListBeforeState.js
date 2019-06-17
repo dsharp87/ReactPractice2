@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from './Welcome';
+import Welcome from './WelcomeBeforeState';
 
 export  default class NameList extends React.Component {
     //name mapper
