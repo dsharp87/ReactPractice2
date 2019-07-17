@@ -1,5 +1,5 @@
 import React from 'react'
-import { TimerHeader } from './Timer/TimerHeader'
+import TimerHeader  from './Timer/TimerHeader'
 import TimerButton from './Timer/TimerButton'
 import RestartButton from './Timer/RestartButton'
 
@@ -11,8 +11,8 @@ export default class Timer extends React.Component {
             isStarted: false,
             restartCount: 0,
             totalTime: 0,
-            // timesAtRestart: [],
-            // this isn't working
+            timesAtRestart: [],
+            //this works, but trying to console log this array will return undefined
         }
         this.handleClick = this.handleClick.bind(this)
         this.restartClick = this.restartClick.bind(this)
@@ -25,7 +25,7 @@ export default class Timer extends React.Component {
         
     }
 
-    // intended to set state of Array, but doesn't work
+    // intended to set state of Array to default value
     // componentWillMount() {
     //     this.setState({
     //         timesAtRestart: [1,2,3]
@@ -66,7 +66,7 @@ export default class Timer extends React.Component {
         this.setState(prevState => ({
             restartCount : prevState.restartCount += 1,
             totalTime : prevState.totalTime += prevState.time,
-            // timesAtRestart : prevState.timesAtRestart.concat(prevState.time),
+            timesAtRestart : prevState.timesAtRestart.concat(prevState.time),
             time : 0
         }))
     }
@@ -76,7 +76,8 @@ export default class Timer extends React.Component {
     render() {
         return (
             <div>
-                <TimerHeader time={this.state.time} restartCount={this.state.restartCount} totalTime={this.state.totalTime} timesAtRestart={this.state.timesAtRestart}/>
+                {/* {JSON.stringify(this.state, null, 2)} */}
+                <TimerHeader time={this.state.time} restartCount={this.state.restartCount} totalTime={this.state.totalTime} timesAtRestart={this.state.timesAtRestart} />
                 <TimerButton handleClick={this.handleClick} isStarted={this.state.isStarted} />
                 <RestartButton restartClick={this.restartClick}/>
             </div>

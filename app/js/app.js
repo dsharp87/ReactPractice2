@@ -1,23 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
+import { Router, Route, browserHistory } from 'react-router'
 
 import Layout from './components/Layout'
+import Timer from './components/Timer'
+import FilterableNameList from './components/FilterableNameList'
 
-import names from '../../mock-data'
-
-
-class App extends React.Component {
-    render() {
-        return (
-            <div>
-                <Layout names={names} />
-            </div>
-        )
-    }
-}
 
 ReactDOM.render(
-    <App />,
+    <Router history={browserHistory}>
+        <Route path="/" component={Layout} >
+            <Route path="timer" component={Timer} />
+            <Route path="namelist" component={FilterableNameList} />
+        </Route>
+    </Router>,
     document.getElementById('app')
 );
  
