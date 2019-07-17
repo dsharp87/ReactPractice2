@@ -11,7 +11,8 @@ export default class Timer extends React.Component {
             isStarted: false,
             restartCount: 0,
             totalTime: 0,
-            // timesAtRestart: [1,2,3], --this isn't working
+            // timesAtRestart: [],
+            // this isn't working
         }
         this.handleClick = this.handleClick.bind(this)
         this.restartClick = this.restartClick.bind(this)
@@ -21,7 +22,15 @@ export default class Timer extends React.Component {
         this.timer = setInterval(
             () => this.startTimer(),
         1000)
+        
     }
+
+    // intended to set state of Array, but doesn't work
+    // componentWillMount() {
+    //     this.setState({
+    //         timesAtRestart: [1,2,3]
+    //     })
+    // }
 
     componentWillUnmount() {
         clearInterval(this.timer)
