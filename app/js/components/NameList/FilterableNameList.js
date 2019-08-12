@@ -1,6 +1,6 @@
 import React from 'react';
-import NameRow from './NameList/NameRow'
-import names from '../../../mock-data'
+import NameRow from './NameRow'
+import names from '../../../../mock-data'
 
 export default class FilterableNameList extends React.Component {    
     constructor() {

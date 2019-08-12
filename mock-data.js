@@ -1,154 +1,84 @@
 const names = 
 [{
-    "id": 1,
-    "first_name": "Walden",
-    "last_name": "Bridewell",
-    "email": "wbridewell0@nytimes.com",
-    "gender": "Male"
-  }, {
-    "id": 2,
-    "first_name": "Yank",
-    "last_name": "Brandino",
-    "email": "ybrandino1@cornell.edu",
-    "gender": "Male"
-  }, {
-    "id": 3,
-    "first_name": "Chantal",
-    "last_name": "Brockie",
-    "email": "cbrockie2@slideshare.net",
-    "gender": "Female"
-  }, {
-    "id": 4,
-    "first_name": "Guglielma",
-    "last_name": "Isbell",
-    "email": "gisbell3@miibeian.gov.cn",
-    "gender": "Female"
-  }, {
-    "id": 5,
-    "first_name": "Neils",
-    "last_name": "Phethean",
-    "email": "nphethean4@4shared.com",
-    "gender": "Male"
-  }, {
-    "id": 6,
-    "first_name": "Paige",
-    "last_name": "Allport",
-    "email": "pallport5@businessinsider.com",
-    "gender": "Female"
-  }, {
-    "id": 7,
-    "first_name": "Deborah",
-    "last_name": "Verrell",
-    "email": "dverrell6@google.fr",
-    "gender": "Female"
-  }, {
-    "id": 8,
-    "first_name": "Aylmer",
-    "last_name": "Hovert",
-    "email": "ahovert7@shareasale.com",
-    "gender": "Male"
-  }, {
-    "id": 9,
-    "first_name": "Monah",
-    "last_name": "Whittlesea",
-    "email": "mwhittlesea8@mozilla.com",
-    "gender": "Female"
-  }, {
-    "id": 10,
-    "first_name": "Deirdre",
-    "last_name": "Francesc",
-    "email": "dfrancesc9@amazon.co.uk",
-    "gender": "Female"
-  }, {
-    "id": 11,
-    "first_name": "Austin",
-    "last_name": "Balling",
-    "email": "aballinga@psu.edu",
-    "gender": "Male"
-  }, {
-    "id": 12,
-    "first_name": "Gerry",
-    "last_name": "Greasty",
-    "email": "ggreastyb@ameblo.jp",
-    "gender": "Male"
-  }, {
-    "id": 13,
-    "first_name": "Cybil",
-    "last_name": "Chamberlayne",
-    "email": "cchamberlaynec@archive.org",
-    "gender": "Female"
-  }, {
-    "id": 14,
-    "first_name": "Madelon",
-    "last_name": "Mandeville",
-    "email": "mmandevilled@storify.com",
-    "gender": "Female"
-  }, {
-    "id": 15,
-    "first_name": "Ezri",
-    "last_name": "Jaquin",
-    "email": "ejaquine@arizona.edu",
-    "gender": "Male"
-  }, {
-    "id": 16,
-    "first_name": "Leopold",
-    "last_name": "Karppi",
-    "email": "lkarppif@miibeian.gov.cn",
-    "gender": "Male"
-  }, {
-    "id": 17,
-    "first_name": "Derry",
-    "last_name": "Zuann",
-    "email": "dzuanng@bandcamp.com",
-    "gender": "Male"
-  }, {
-    "id": 18,
-    "first_name": "Dorree",
-    "last_name": "Strethill",
-    "email": "dstrethillh@nyu.edu",
-    "gender": "Female"
-  }, {
-    "id": 19,
-    "first_name": "Avigdor",
-    "last_name": "Huet",
-    "email": "ahueti@fastcompany.com",
-    "gender": "Male"
-  }, {
-    "id": 20,
-    "first_name": "Silvie",
-    "last_name": "Stockney",
-    "email": "sstockneyj@weebly.com",
-    "gender": "Female"
-  }, {
-    "id": 21,
-    "first_name": "Fleming",
-    "last_name": "Megson",
-    "email": "fmegsonk@sina.com.cn",
-    "gender": "Male"
-  }, {
-    "id": 22,
-    "first_name": "Kenon",
-    "last_name": "Smyth",
-    "email": "ksmythl@tuttocitta.it",
-    "gender": "Male"
-  }, {
-    "id": 23,
-    "first_name": "Pablo",
-    "last_name": "Savoury",
-    "email": "psavourym@kickstarter.com",
-    "gender": "Male"
-  }, {
-    "id": 24,
-    "first_name": "Lukas",
-    "last_name": "Adger",
-    "email": "ladgern@princeton.edu",
-    "gender": "Male"
-  }, {
-    "id": 25,
-    "first_name": "Thane",
-    "last_name": "Iorns",
-    "email": "tiornso@wunderground.com",
-    "gender": "Male"
-  }]
+  "id": 1,
+  "first_name": "Livvy",
+  "last_name": "Almon",
+  "email": "lalmon0@shareasale.com",
+  "gender": "Female",
+  "city": "Kuala Pilah",
+  "catch_phrase": "Managed incremental infrastructure"
+}, {
+  "id": 2,
+  "first_name": "Hilliary",
+  "last_name": "Steinhammer",
+  "email": "hsteinhammer1@macromedia.com",
+  "gender": "Female",
+  "city": "Anjirmuara",
+  "catch_phrase": "Proactive full-range paradigm"
+}, {
+  "id": 3,
+  "first_name": "Stevie",
+  "last_name": "Coopland",
+  "email": "scoopland2@slashdot.org",
+  "gender": "Male",
+  "city": "Calceta",
+  "catch_phrase": "Automated context-sensitive leverage"
+}, {
+  "id": 4,
+  "first_name": "Ginger",
+  "last_name": "Busch",
+  "email": "gbusch3@biglobe.ne.jp",
+  "gender": "Female",
+  "city": "Homa Bay",
+  "catch_phrase": "Streamlined incremental collaboration"
+}, {
+  "id": 5,
+  "first_name": "Rubi",
+  "last_name": "Blade",
+  "email": "rblade4@fema.gov",
+  "gender": "Female",
+  "city": "Villanova",
+  "catch_phrase": "Centralized responsive groupware"
+}, {
+  "id": 6,
+  "first_name": "Corella",
+  "last_name": "Chatfield",
+  "email": "cchatfield5@deliciousdays.com",
+  "gender": "Female",
+  "city": "Dalududalu",
+  "catch_phrase": "Object-based real-time open architecture"
+}, {
+  "id": 7,
+  "first_name": "Briana",
+  "last_name": "Siseland",
+  "email": "bsiseland6@skype.com",
+  "gender": "Female",
+  "city": "Jiaotang",
+  "catch_phrase": "Innovative contextually-based matrices"
+}, {
+  "id": 8,
+  "first_name": "Dar",
+  "last_name": "Ambrogelli",
+  "email": "dambrogelli7@homestead.com",
+  "gender": "Male",
+  "city": "Potlot",
+  "catch_phrase": "Down-sized motivating workforce"
+}, {
+  "id": 9,
+  "first_name": "Courtenay",
+  "last_name": "Mahmood",
+  "email": "cmahmood8@youtube.com",
+  "gender": "Female",
+  "city": "Shidu",
+  "catch_phrase": "Upgradable client-server hierarchy"
+}, {
+  "id": 10,
+  "first_name": "Jimmy",
+  "last_name": "Foldes",
+  "email": "jfoldes9@elpais.com",
+  "gender": "Male",
+  "city": "Dédougou",
+  "catch_phrase": "Multi-channelled coherent monitoring"
+}]
 
   export default names;

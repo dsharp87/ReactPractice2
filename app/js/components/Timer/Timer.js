@@ -1,7 +1,8 @@
 import React from 'react'
-import TimerHeader  from './Timer/TimerHeader'
-import TimerButton from './Timer/TimerButton'
-import RestartButton from './Timer/RestartButton'
+
+import TimerHeader  from './TimerHeader'
+import TimerButton from './TimerButton'
+import RestartButton from './RestartButton'
 
 export default class Timer extends React.Component {
     constructor() {
@@ -18,11 +19,11 @@ export default class Timer extends React.Component {
         this.restartClick = this.restartClick.bind(this)
     }
 
+
     componentDidMount() {
         this.timer = setInterval(
             () => this.startTimer(),
         1000)
-        
     }
 
     // intended to set state of Array to default value
