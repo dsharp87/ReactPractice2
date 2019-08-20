@@ -12,7 +12,7 @@ export default class Header extends React.Component {
         <div>
             <ul>
                 <li><NavList to="/">Home</NavList></li>
-                <li><NavList to="/timer">Timer</NavList></li>
+                <li><NavList to="/products">Products</NavList></li>
                 <li><NavList to="/names">Name List</NavList></li>
             </ul>
         </div>
