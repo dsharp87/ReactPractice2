@@ -15,6 +15,22 @@ module.exports = {
                 query: {
                     presets: ['react', 'es2015']
                 }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style-loader'
+            },
+            {
+                test: /\.css$/,
+                loader: 'css-loader',
+                query: {
+                    modules: {
+                        localIdentName: "[name]__[local]___[hash:base64:5]",
+                        
+                    }
+                    // localsConvention: 'camelCase',
+                    //this isn't working for converting css class names that are xxx-yyy to xxxYyy
+                }
             }
         ]
     },

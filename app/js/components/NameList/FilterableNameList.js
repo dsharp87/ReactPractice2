@@ -47,9 +47,8 @@ export default class FilterableNameList extends React.Component {
             <div>
                 {/* {JSON.stringify(this.state, null, 2)} */}
                 <h1>Hello, I'm the namelist component!</h1>
-                <div>
-                    <h2>{this.state.event}</h2>
-                    <input onChange={this.nameFilter} type="text"></input>
+                <input onChange={this.nameFilter} type="text"></input>
+                <div className="pure-g">
                     {names.map((name) => 
                         <NameRow key={name.id} name={name} />
                     )}

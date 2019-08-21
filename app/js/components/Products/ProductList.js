@@ -1,5 +1,7 @@
 import React from 'react';
 
+import styles from './Products.css'
+
 import ProductRow from './ProductRow'
 import PRODUCTS from '../../../../mock-products'
 
@@ -19,9 +21,9 @@ export default class ProductList extends React.Component {
 
     render() {
         let { products } = this.state
-        // console.log(products);
+        // console.log(styles);
         return (
-            <div>
+            <div className={`pure-g ${styles.placeholder}`}>
                 {products.map((product)=> 
                         <ProductRow key={product.id} product={product} />
                 )}
