@@ -1,4 +1,5 @@
 import React from 'react';
+import { active } from './Header.css'
 
 import { Link, IndexLink } from 'react-router';
 
@@ -10,11 +11,10 @@ export default class NavList extends React.Component {
 
     render() {
         let {to} = this.props;
-        let activeClassName = "active"
         if(to === '/') {
-            return <IndexLink {...this.props} activeClassName={activeClassName}/>
+            return <IndexLink {...this.props} activeClassName={active}/>
         } else {
-            return <Link {...this.props} activeClassName={activeClassName} />
+            return <Link {...this.props} activeClassName={active} />
         }
     }
 }

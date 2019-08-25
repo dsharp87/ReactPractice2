@@ -1,7 +1,9 @@
-.name {
-    font-size: 5em;
+.namelist {
+    margin:20px;
 }
 
-.aquamarine {
-    background-color: blue;
+.name {
+    font-size: 1.25em;
 }
+
+

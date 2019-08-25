@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import styles from './Products.css'
 
 
 export default class ProductRow extends React.Component {
@@ -10,18 +11,14 @@ export default class ProductRow extends React.Component {
     
 
     render() {
-        const style = {
-            width: '35%',
-            height: 'auto'
-        }
         const { productName, productAdjective, price, id, image } = this.props.product
         return (
-            <div className="pure-u-1 pure-u-md-1-2">
+            <div className={`"pure-u-1 pure-u-md-1-2 ${styles.product}`}>
                 <h3><Link to={`/products/${id}`}>{productName}</Link></h3>
                 <ul>
+                    <li><img className={`pure-img ${styles.thumb}`} src={image} /></li>
                     <li>{productAdjective}</li>
                     <li>${price}</li>
-                    <li><img style={style} className="pure-img" src={image} /></li>
                 </ul>
             </div>
         )

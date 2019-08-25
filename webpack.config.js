@@ -1,3 +1,5 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+
 module.exports = {
     entry: "./app/js/app.js",
     output: {
@@ -36,7 +38,10 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true
-    }
+    },
+    plugins: [
+        new ExtractTextPlugin('styles.css')
+    ]
 }
 
 

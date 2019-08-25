@@ -1,6 +1,7 @@
 import React from 'react';
 import NameRow from './NameRow'
 import names from '../../../../mock-data'
+import styles from './NameList.css'
 
 export default class FilterableNameList extends React.Component {    
     constructor() {
@@ -44,7 +45,7 @@ export default class FilterableNameList extends React.Component {
                 return fullName.toLowerCase().includes(filterText.toLocaleLowerCase());
             });
         return (
-            <div>
+            <div className={styles.namelist}>
                 {/* {JSON.stringify(this.state, null, 2)} */}
                 <h1>Hello, I'm the namelist component!</h1>
                 <input onChange={this.nameFilter} type="text"></input>

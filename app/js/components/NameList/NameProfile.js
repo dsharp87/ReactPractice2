@@ -1,6 +1,7 @@
 import React from 'react'
 import names from '../../../../mock-data'
 import { browserHistory, Link } from 'react-router'
+import { namelist } from './NameList.css'
 
 export default class NameProfile extends React.Component {
     constructor() {
@@ -28,10 +29,10 @@ export default class NameProfile extends React.Component {
             user = <h2>Sorry, this user was not found :(</h2>
         }
         return (
-            <div>
+            <div className={namelist}>
             {/* {JSON.stringify(this.props.params.id)} */}
                 {user}
-               <button><Link to="/names">Go to all the names</Link></button>
+               <Link to="/names"><button className="pure-button">Go to all the names</button></Link>
             </div>
         )
     }
