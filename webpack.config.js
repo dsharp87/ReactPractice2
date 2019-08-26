@@ -13,10 +13,11 @@ module.exports = {
                 exclude: /node_modules/,
                 // this is not working
                 // loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015']
-                loader: 'babel',
-                query: {
-                    presets: ['react', 'es2015']
-                }
+                loader: 'babel'
+                // query: {
+                //     presets: ['react', 'es2015'],
+                //     plugins: ['transform-object-rest-spread']
+                // }
             },
             {
                 test: /\.css$/,
