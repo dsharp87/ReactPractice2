@@ -16,7 +16,7 @@ export default class Layout extends React.Component {
             backgroundColor: 'red',
             fontSize: '2em'
         }
-
+        console.log("about to render layout page")
         return (
             <div>
                

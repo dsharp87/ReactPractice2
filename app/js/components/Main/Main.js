@@ -10,6 +10,7 @@ export default class Home extends React.Component {
     }
 
     render() {
+        console.log("about to render main body of home page")
         let randomProduct = Math.floor(Math.random() * PRODUCTS.length)
         const { background, header, divider } = styles;
         return (

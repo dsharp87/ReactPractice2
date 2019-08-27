@@ -15,9 +15,9 @@ import ProductList from './components/Products/ProductList'
 import ProductProfile from './components/Products/ProductProfile';
 
 
-
+console.log("about to start virtualDOM render in app.js")
 ReactDOM.render(
-    <Provider store={store}>
+        <Provider store={store}>
         <Router history={browserHistory}>
             <Route path="/" component={Layout} >
                 <IndexRoute component={Main} />
