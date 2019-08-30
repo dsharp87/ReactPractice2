@@ -1,20 +1,23 @@
-import { GET_NAMES, FILTER_NAMES, DELETE_NAME } from '../actions/names';
+import { GET_NAMES, FILTER_NAMES, DELETE_NAME, GET_PROFILE } from '../actions/names';
 
 //declare initial state
 const initialNameState = {
     names: [],
-    filterText: ''
+    filterText: '',
+    currentProfile: {}
 }
 
 //defining the reducer called 'name'
 //use switch cases to figure out which action shoulb be run, then returns the state, after preforing the defined action on it
+//in these cases, the action being performed is overwriting a field name (names or filterText) with the value provided (action.XXXX)
 const name = (state = initialNameState, action) => {
     console.log(`im in name reducer about to look for an action called ${action.type}`)
     switch(action.type) {
         case GET_NAMES:
             console.log("im running the get names action")
             return {...state, names: action.names};
-        case FILTER_NAMES:
+        
+            case FILTER_NAMES:
             console.log("im running the fitler names action")
             return {...state, filterText: action.text};
         
@@ -25,6 +28,12 @@ const name = (state = initialNameState, action) => {
             );
             return {...state, names: newNames};
         
+        case GET_PROFILE:
+            const profile = state.names.find((name) => 
+                name.id === action.id
+            )
+            return {...state, currentProfile: profile}
+
         default:
             return state;
     }

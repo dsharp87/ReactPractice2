@@ -1,5 +1,4 @@
 import React from 'react'
-import PRODUCTS from '../../../../mock-products'
 import styles from './Products.css'
 
 export default class ProductProfile extends React.Component {
@@ -9,13 +8,11 @@ export default class ProductProfile extends React.Component {
 
     componentWillMount() {
         let productID = this.props.id || +this.props.params.id;
-        this.product = PRODUCTS.find((product) =>
-            product.id === productID
-        )    
+        this.props.getProduct(productID);
     }
 
     render() {
-        let { productName, productAdjective, productMaterial,  price, color, text, image } = this.product
+        let { productName, productAdjective, productMaterial,  price, color, text, image } = this.props.selectedProduct
         return (
             <div className={styles.products}>
                 <div className="pure-g">

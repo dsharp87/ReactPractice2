@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router'
-import ProductProfile from '../Products/ProductProfile'
+import ProductProfileContainer from '../Products/ProductProfileContainer'
 import PRODUCTS from '../../../../mock-products'
 import styles from './Main.css';
 
@@ -26,7 +26,7 @@ export default class Home extends React.Component {
                     </ul>
                 </div>
                 <div className={divider}></div>
-                <ProductProfile  id={randomProduct}/>
+                <ProductProfileContainer  id={randomProduct}/>
                 <Link to={`/products/${randomProduct}`}>Click here for more</Link>
                 <p>
                     fdslkjj;jgfd gjkflds;jgf;ldjgd;lsk klj;lkdjkl;fjsg jgkfldkgfdjs;ldjkgl; jiowajfioawjf iew iefwj;oi; fewia;fewiji;li;a;  jfiewa;l

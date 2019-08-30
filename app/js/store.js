@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
-import name from './reducers/name';
+import combineReducers from './reducers/reducers'
 
 console.log("about to create store in store.js")
-const store = createStore(name);
+const store = createStore(combineReducers);
 
 export default store;

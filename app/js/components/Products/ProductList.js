@@ -3,7 +3,6 @@ import React from 'react';
 import styles from './Products.css'
 
 import ProductRow from './ProductRow'
-import PRODUCTS from '../../../../mock-products'
 
 export default class ProductList extends React.Component {
     constructor() {
@@ -11,16 +10,12 @@ export default class ProductList extends React.Component {
         this.state = {
             products: []
         }
-    }
-
-    componentWillMount() {
-        this.setState({
-            products: PRODUCTS
-        })
+        
     }
 
     render() {
-        let { products } = this.state
+        // console.log(this.props)
+        let {products} = this.props
         // console.log(styles);
         return (
             <div className={`pure-g ${styles.products}`}>
