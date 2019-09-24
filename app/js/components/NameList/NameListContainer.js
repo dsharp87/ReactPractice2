@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { filterNames, deleteName } from '../../actions/names';
+import { filterNames, deleteName, addName } from '../../actions/names';
 
 import FilterableNameList from './FilterableNameList'
 
@@ -19,11 +19,11 @@ const mapStateToProps = (store) => {
     console.log("about to return State map to props in namelist container")
     return {
         //filters the names array to only contain names that have the specific substring that is stored in 'filtered text' part of sate.  Trigger by typing in filter box
-        names: namesArray,
-        filteredNames: namesArray.filter((name) => {
+        names: namesArray.filter((name) => {
             const fullName = `${name.first_name} ${name.last_name}`;
             return fullName.toLowerCase().includes(filterText.toLowerCase())
-        })    
+        }), 
+        filterText: filterText  
     }
 }
 
@@ -37,6 +37,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         deleteName: (id) => {
             dispatch(deleteName(id))
+        },
+        addName: (payload) => {
+            dispatch(addName(payload))
         }
     }
 }

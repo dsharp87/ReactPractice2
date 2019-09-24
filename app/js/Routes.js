@@ -11,28 +11,30 @@ import ProductProfileContainer from './components/Products/ProductProfileContain
 
 //this is all so we can use the onEnter tag in the route for names/products
 //lets us remove the lifecyle methods and need for a component in those container files
-import store from './store';
-import { getNames } from './actions/names'
-import names from '../../mock-data'
-import { getProducts } from './actions/products'
-import PRODUCTS from '../../mock-products'
+// import store from './store';
+// import { getNames } from './actions/names'
+// import names from '../../mock-data'
+// import { getProducts } from './actions/products'
+// import PRODUCTS from '../../mock-products'
 
-const grabNames = () => {
-    store.dispatch(getNames(names))
-}
+//these were used before we added intial state to store.js
+// const grabNames = () => {
+//     store.dispatch(getNames(names))
+// }
 
-const grabProducts = () => {
-    store.dispatch(getProducts(PRODUCTS))
-}
+// const grabProducts = () => {
+//     store.dispatch(getProducts(PRODUCTS))
+// }
 
 export const routes = (
     <Route path="/" component={Layout} >
         <IndexRoute component={Main} />
-        <Route path="products" onEnter={grabProducts} >
+        <Route path="products" >
             <IndexRoute component={ProductListContainer} />
             <Route path=":id" component={ProductProfileContainer} />
         </Route>
-        <Route path="names" onEnter={grabNames} >
+        {/* <Route path="names" onEnter={grabNames} > */}
+        <Route path="names" >
             <IndexRoute component={NameListContainer} />
             <Route path=":id" component={NameProfileContainer} />
         </Route>

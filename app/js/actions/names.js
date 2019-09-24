@@ -3,6 +3,7 @@ export const GET_NAMES = 'GET_NAMES';
 export const FILTER_NAMES = 'FILTER_NAMES';
 export const DELETE_NAME = 'DELETE_NAME';
 export const GET_PROFILE = 'GET_PROFILE';
+export const ADD_NAME = "ADD_NAME";
 
 
 //action creators
@@ -37,5 +38,12 @@ export const getProfile = (id) => {
     return {
         type: GET_PROFILE,
         id: id
+    }
+}
+
+export const addName = (payload) => {
+    return {
+        type: ADD_NAME,
+        payload: payload
     }
 }
